@@ -51,7 +51,7 @@
                 </Grid>
             </sidebar:SidebarControl.SidebarContent>
             
-            <Grid VerticalAlignment="Top" HorizontalAlignment="Left"
+            <Grid VerticalAlignment="Top" HorizontalAlignment="Stretch"
                   Margin="12">
                 <TextBlock Style="{StaticResource PhoneTextNormalStyle}">Your current view goes here</TextBlock>
             </Grid>

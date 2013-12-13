@@ -83,7 +83,7 @@
                                 <RowDefinition Height="*"/>
                             </Grid.RowDefinitions>
 
-                            <StackPanel Grid.Row="0" Margin="0"
+                            <Border Grid.Row="0" Margin="0"
                                         Background="{TemplateBinding HeaderBackground}">
                                 <StackPanel Orientation="Horizontal" Margin="0">
                                     <Button Margin="-12"
@@ -103,11 +103,11 @@
                                                     FontFamily="{StaticResource PhoneFontFamilySemiBold}"
                                                     FontSize="{StaticResource PhoneFontSizeMedium}" />
                                 </StackPanel>
-                            </StackPanel>
+                            </Border>
                             
                             <ContentControl Grid.Row="1"
-                                            HorizontalContentAlignment="Left"
-                                            VerticalContentAlignment="Top"
+                                            HorizontalContentAlignment="Stretch"
+                                            VerticalContentAlignment="Stretch"
                                             Content="{TemplateBinding Content}" />
                         </Grid>
                     </Grid>
