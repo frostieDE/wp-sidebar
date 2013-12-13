@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>SidebarWP8</id>
+    <version>1.0.0</version>
+    <title>WP Sidebar</title>
+    <authors>Marcel Marnitz</authors>
+    <licenseUrl>https://github.com/frostieDE/wp-sidebar/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/frostieDE/wp-sidebar</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>A simple sidebar control for Windows Phone 8. This type of control is commonly used in Android apps</description>
+    <releaseNotes>This is the initial release. Feel free to contribute on GitHub</releaseNotes>
+    <copyright>Copyright 2013</copyright>
+    <tags>windows phone wp8 wp sidebar control</tags>
+  </metadata>
+  
+  <files>
+	<file src="..\src\SidebarWP8\Bin\Release\SidebarWP8.*" target="lib\windowsphone8" />
+  </files>
+</package>

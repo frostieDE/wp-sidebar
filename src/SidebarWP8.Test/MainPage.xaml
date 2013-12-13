@@ -1,0 +1,62 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="SidebarWP8.Test.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:sidebar="clr-namespace:SidebarWP8;assembly=SidebarWP8"
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    shell:SystemTray.IsVisible="True"
+    TextOptions.TextHintingMode="Animated">
+
+    <phone:PhoneApplicationPage.Resources>
+        <Style TargetType="Border" x:Key="MenuHeaderBorderStyle">
+            <Setter Property="Background" Value="Green" />
+            <Setter Property="HorizontalAlignment" Value="Stretch" />
+        </Style>
+        
+        <Style TargetType="TextBlock" x:Key="MenuHeaderStyle">
+            <Setter Property="Padding" Value="24" />
+            <Setter Property="Foreground" Value="White" />
+            <Setter Property="FontFamily" Value="{StaticResource PhoneFontFamilySemiBold}" />
+            <Setter Property="FontSize" Value="{StaticResource PhoneFontSizeMedium}" />
+        </Style>
+    </phone:PhoneApplicationPage.Resources>
+    
+    <!--LayoutRoot ist das Stammraster, in dem alle anderen Seiteninhalte platziert werden-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <sidebar:SidebarControl x:Name="sidebarControl"
+                                HeaderText="MY APPNAME"
+                                HeaderBackground="Green"
+                                HeaderForeground="White"
+                                SidebarBackground="{StaticResource PhoneChromeBrush}">
+            <sidebar:SidebarControl.SidebarContent>
+                <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="380">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+
+                    <Border Style="{StaticResource MenuHeaderBorderStyle}">
+                        <TextBlock Style="{StaticResource MenuHeaderStyle}">MENU</TextBlock>
+                    </Border>
+                    
+                    
+                </Grid>
+            </sidebar:SidebarControl.SidebarContent>
+            
+            <Grid VerticalAlignment="Top" HorizontalAlignment="Left"
+                  Margin="12">
+                <TextBlock Style="{StaticResource PhoneTextNormalStyle}">Your current view goes here</TextBlock>
+            </Grid>
+        </sidebar:SidebarControl>
+            
+    </Grid>
+
+</phone:PhoneApplicationPage>
